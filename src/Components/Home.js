@@ -1,5 +1,16 @@
+import Header from './Header'
+import Footer from './Footer'
+
 function Home() {
-    return (<div>Home</div>)
+    return (
+    
+    <div>
+        <Footer />
+        Home
+        <Header />
+
+    </div>
+)
 }
 
 export default Home

@@ -1,5 +1,16 @@
+import Header from './Header'
+import Footer from './Footer'
+
 function Error() {
-    return (<div>Error</div>)
+    return (
+    
+        <div>
+            <Footer />
+            Error
+            <Header />
+
+        </div>
+    )
 }
 
 export default Error
