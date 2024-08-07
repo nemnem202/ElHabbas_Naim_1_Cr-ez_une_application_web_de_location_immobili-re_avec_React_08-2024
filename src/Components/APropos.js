@@ -3,14 +3,24 @@ import Footer from './Footer'
 
 function APropos() {
     return (
+  
+    <div className='MainContainer'>
     
-        <div>
-            <Footer />
-            A Propos
-            <Header />
+        <div className='HeaderPageContent'>
+                <div>                
+                    <Header page={'APropos'}/>
+                    A Propos
 
-        </div>
+                </div>
+        
+        </div>        
+        
+        <Footer />
+    
+    </div>  
+
     )
 }
 
 export default APropos
+

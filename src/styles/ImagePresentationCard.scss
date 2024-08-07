@@ -1,0 +1,26 @@
+.ImagePresentationCardContainer {
+    overflow:hidden;
+    position: relative;
+    border-radius: 25px;
+    height: 200px;
+    background-color: black;
+}
+
+
+.ImagePresentationCard {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    opacity: 0.6;
+}
+
+.TitreImagePresentationCard {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: white;
+    transform: translate(-50%, -50%);
+    font-size: 250%;
+}
