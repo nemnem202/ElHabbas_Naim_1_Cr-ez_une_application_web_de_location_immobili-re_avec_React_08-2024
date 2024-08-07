@@ -31,13 +31,13 @@ function HomeContent() {
 
         <div>
             <ImagePresentationCard image={imageSrc} titre={'Chez vous, partout et ailleurs'}/>
-            <div className='GridLocation'>
+            <nav className='GridLocation'>
 
             {logements.map(logement =>(
-                <LocationCard key={logement.id} image={logement.pictures[0]} titre={logement.title}/>
+                <LocationCard key={logement.id} image={logement.pictures[0]} titre={logement.title} index={logement.id}/>
             ))}
 
-            </div>
+            </nav>
         </div>
 
     )

@@ -1,11 +1,11 @@
-function LocationCard({image, titre}) {
+function LocationCard({image, titre, index}) {
     return (
-        <div className="LocationCard">
+        <a className="LocationCard" href={`/Fiche-Logement/${index}`}>
             <div className="ContainerImageLocation">
                 <img src={image}></img>
             </div>
             <h2 >{titre}</h2>
-        </div>
+        </a>
     )
 }
 
