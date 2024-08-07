@@ -1,12 +1,12 @@
 @import 'Layout.scss';
 
 footer {
-    background-color: $Black;
     color: white;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: $Black;
 
 }
 

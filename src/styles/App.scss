@@ -18,8 +18,12 @@ html, body {
   line-height: 1.5;
   padding: 0;
   width: 100%;
+  background-color: $Black;
 }
 
+#root {
+  
+}
 
 ul, ol {
   list-style: none;
@@ -40,13 +44,17 @@ table {
   border-spacing: 0;
 }
 
+.MainContainer {
+
+  background-color: white;
+}
 
 .HeaderPageContent {
-  min-height: 100vh;
   margin:  auto;
   padding: 0px 50px;
   max-width: 1440px;
   display: block;
+
 
 }
 
