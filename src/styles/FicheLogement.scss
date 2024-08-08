@@ -1,0 +1,87 @@
+@import './Layout.scss';
+
+.ContainerImg {
+    height:500px;
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+.ContainerImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.ContainerGroupInfo {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.ContainerGroupInfo .row {
+    display: flex;
+    justify-content: space-between;
+    gap: 5%;
+    margin-top: 20px;
+}
+
+.ContainerGroupInfo h1 {
+    color: $Red;
+    font-size: 300%;
+    font-weight: 400;
+}
+
+.ContainerGroupInfo h2 {
+    font-weight: 600;
+}
+
+.row .MenuDeroulantEtContenu {
+    width: 50%;
+}
+
+.row li {
+    list-style-type: none;
+}
+
+.NomEtImage {
+    color:$Red;
+    display: flex;
+    align-items: center;
+    gap:5px;
+    height: 80px;
+
+}
+
+.NomEtImage div {
+    overflow: hidden;
+    border-radius: 100000px;
+    height: 100%;
+
+}
+
+.NomEtImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.NomEtImage h2 {
+    width: 100px;
+    text-align: right;
+}
+
+.TagContainer {
+    display: flex;
+    gap:5%;
+    color: white;
+    align-items: center;
+}
+
+.LogementTag {
+    background-color: $Red;
+    padding: 2px 20px;
+    border-radius: 10000px;
+    font-size: 80%;
+}

@@ -1,7 +1,8 @@
 import Header from './Header'
 import Footer from './Footer'
 import Rating from '../assets/RatingStars.js'
-
+import '../styles/FicheLogement.scss'
+import MenuDeroulant from './MenuDeroulant.js'
 
 
 function FicheLogement({index}) {
@@ -25,44 +26,51 @@ function FicheLogement({index}) {
 
 function GroupInfo({logement}) {
 
+    const equipments = logement.equipments.map(equipment=>(
+        <li key={equipment}>{equipment}</li>
+    ))
+
     return (
         <div className='MainContainerGroupInfo'>
             <div className='ContainerImg'>
                 <img src={logement.pictures[0]}></img>
             </div>
-            <div>
-                <h1>{logement.title}</h1>
+            <div className='ContainerGroupInfo'>
 
-                <h2>{logement.location}</h2>
+                <div className='row'>
 
-                <h2>{logement.host.name}</h2>
+                    <div>
+                            <h1>{logement.title}</h1>
 
-                <div><img src={logement.host.picture}></img></div>
-
-                <div>
-                
-                    {logement.tags.map(tag =>(
-                    <div>{tag}</div>
-                    ))}
+                            <h2>{logement.location}</h2>
+                    </div>
+                    <div className='NomEtImage'>
+                            <h2>{logement.host.name}</h2>
+                            <div> <img src={logement.host.picture}></img></div>
+                            
+                    </div>
 
                 </div>
 
-                <div>
-                    <h2>Description</h2>
-                    <div>{logement.description}</div>
-                </div>
+                <div className='row'>
 
-                <ul> <h2>Equipements</h2>
-
-                    {logement.equipments.map(equipment =>(
-                        <li>{equipment}</li>
+                    <div className='TagContainer'>
+                        {logement.tags.map(tag =>(
+                        <div className='LogementTag' key={tag}>{tag}</div>
                         ))}
+                    </div>
 
-                </ul>
 
-                <div>
                     <Rating value={Number(logement.rating)}/>
+
+
                 </div>
+
+                <div className='row'>
+                    <MenuDeroulant titre='Description' contenu={logement.description}/>
+                    <MenuDeroulant titre='Équipements' contenu={equipments}/>
+                </div>
+
             </div>
         </div>
     )
