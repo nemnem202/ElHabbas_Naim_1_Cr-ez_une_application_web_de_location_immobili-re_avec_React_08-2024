@@ -30,7 +30,7 @@ function HomeContent() {
     return (
 
         <div>
-            <ImagePresentationCard image={imageSrc} titre={'Chez vous, partout et ailleurs'}/>
+            <ImagePresentationCard image={imageSrc} titre={<><span className='ChezVous'>Chez vous, </span><span>partout et ailleurs</span></>}/>
             <nav className='GridLocation'>
 
             {logements.map(logement =>(

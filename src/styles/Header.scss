@@ -19,3 +19,13 @@ header a {margin-left: 50px;}
 header svg {
     fill: $Red;
 }
+
+@media (max-width:650px) {
+    .Logo {
+        width: 50%;
+    }
+    header a {
+        font-size: 60%;
+        margin-left: 5px;
+    }
+}

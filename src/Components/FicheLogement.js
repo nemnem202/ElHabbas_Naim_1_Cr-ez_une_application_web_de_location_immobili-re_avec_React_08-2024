@@ -3,6 +3,7 @@ import Footer from './Footer'
 import Rating from '../assets/RatingStars.js'
 import '../styles/FicheLogement.scss'
 import MenuDeroulant from './MenuDeroulant.js'
+import Caroussel from './Caroussel.js'
 
 
 function FicheLogement({index}) {
@@ -32,44 +33,49 @@ function GroupInfo({logement}) {
 
     return (
         <div className='MainContainerGroupInfo'>
-            <div className='ContainerImg'>
-                <img src={logement.pictures[0]}></img>
-            </div>
+            
+            <Caroussel object={logement}/>
+
             <div className='ContainerGroupInfo'>
 
-                <div className='row'>
+                <div className='row1'>
+                    <div className='TitreTag'>
 
-                    <div>
-                            <h1>{logement.title}</h1>
+                        <div className='Titre'>
+                                <h1>{logement.title}</h1>
 
-                            <h2>{logement.location}</h2>
-                    </div>
-                    <div className='NomEtImage'>
-                            <h2>{logement.host.name}</h2>
-                            <div> <img src={logement.host.picture}></img></div>
-                            
-                    </div>
+                                <h2>{logement.location}</h2>
+                        </div>
 
-                </div>
+                        <div className='TagContainer'>
+                            {logement.tags.map(tag =>(
+                            <div className='LogementTag' key={tag}>{tag}</div>
+                            ))}
+                        </div>
 
-                <div className='row'>
 
-                    <div className='TagContainer'>
-                        {logement.tags.map(tag =>(
-                        <div className='LogementTag' key={tag}>{tag}</div>
-                        ))}
                     </div>
 
+                    <div className='ProfilNote'>
 
-                    <Rating value={Number(logement.rating)}/>
+                        <div className='NomEtImage'>
+                                <h2>{logement.host.name}</h2>
+                                <div> <img src={logement.host.picture}></img></div>
+                                
+                        </div>
+
+                        <Rating value={Number(logement.rating)}/>
 
 
+                    </div>
                 </div>
 
-                <div className='row'>
-                    <MenuDeroulant titre='Description' contenu={logement.description}/>
-                    <MenuDeroulant titre='Équipements' contenu={equipments}/>
-                </div>
+
+
+                    <div className='DescriptEquip'>
+                        <MenuDeroulant titre='Description' contenu={logement.description}/>
+                        <MenuDeroulant titre='Équipements' contenu={equipments}/>
+                    </div>
 
             </div>
         </div>
